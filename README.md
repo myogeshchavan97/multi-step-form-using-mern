@@ -1,4 +1,4 @@
-## Connect to MongoDB Database
+## Steps to run this project
 
 Follow [this article](https://levelup.gitconnected.com/how-to-install-mongodb-database-on-local-environment-19a8a76f1b92?source=friends_link&sk=416b443bad1f86b292e4b72602cf5c9b) to install and start the MongoDB database on your local machine.
 
