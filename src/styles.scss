@@ -1,0 +1,150 @@
+$base-color: #e67e22;
+$blue-color: #22ac11;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $base-color;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  color: unset;
+  background-color: unset;
+  border-color: unset;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2.2rem;
+}
+
+.btn {
+  letter-spacing: 1px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+
+  .step {
+    margin: 0.5rem 3rem;
+    display: flex;
+    color: #ccc;
+
+    a {
+      color: $base-color;
+    }
+
+    div:first-of-type {
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      line-height: 100%;
+      padding-top: 7%;
+    }
+
+    :last-child {
+      margin-top: 3%;
+    }
+
+    &.active {
+      div:first-of-type {
+        background-color: $base-color;
+        border: 1px solid transparent;
+        color: #fff;
+      }
+
+      div:last-of-type {
+        color: $base-color;
+      }
+    }
+  }
+}
+
+.input-form {
+  width: 60%;
+  margin: 3rem auto;
+}
+
+.errorMsg {
+  max-width: 350px;
+  color: #f21e08;
+  padding: 2px 0;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.login-error {
+  font-size: 1.1rem;
+}
+
+.successMsg {
+  color: $blue-color;
+}
+
+.loading {
+  color: #777;
+}
+
+.form-control.input-error {
+  border: 2px solid #f21e08;
+}
+
+.user-details {
+  color: $blue-color;
+  padding: 5px 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .input-form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .steps .step {
+    margin: 0.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .steps .step {
+    margin: 0.5rem 1rem;
+    font-size: 0.9rem;
+
+    div:first-of-type {
+      padding-top: 9%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+
+    .step {
+      align-items: center;
+    }
+  }
+}
